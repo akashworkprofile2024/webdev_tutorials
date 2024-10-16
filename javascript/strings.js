@@ -52,4 +52,3 @@ const var2 = "html javascript css php"
 console.log(var2.split(','));
 
 
-console.log("echo");
