@@ -17,9 +17,9 @@ expres();
 
 // ==============================
 
-(() =>{
-    console.log('Using Arrow Fcuntion in IIFE: DB Connectedd2')
-})()
+((name) =>{
+    console.log(`Using Arrow Fcuntion in IIFE: DB Connectedd2 to ${name}`)
+})('Akash')
 
 
 
