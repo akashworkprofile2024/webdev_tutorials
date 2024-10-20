@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navs</title>
+</head>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+
+<style>
+
+</style>
+
+<body style='background-color:rgb(0, 0, 0); color:white'>
+     <!--Basiv Horizontal nav  -->
+    
+    <div class="container mt-3">
+        <h2 class="text-white">Basic Horizontal nav</h2>
+        <ul class="nav bg-light">
+            <li class="nav-item">
+                <a class="nav-link" href="">Link 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Link2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="">Disabled Link</a>
+            </li>
+        </ul>
+    </div>
+
+
+    <br>
+
+    <!-- Align Nav Center-->
+    <div class="container mt-3">
+        <h2 class="text-white">Align Navigation Center</h2>
+        <ul class="nav bg-light justify-content-center">
+            <li class="nav-link"><a class="nav-link" href="">Link 1</a></li>
+            <li class="nav-link"><a class="nav-link" href="">Link 2</a></li>
+            <li class="nav-link"><a class="nav-link" href="">Link 3</a></li>
+        </ul>
+    </div><br>
+
+    <!-- Align Nav End-->
+    <div class="container mt-3">
+        <h2 class="text-white">Align Navigation End</h2>
+        <ul class="nav bg-light justify-content-end">
+            <li class="nav-link"><a class="nav-link" href="">Link 1</a></li>
+            <li class="nav-link"><a class="nav-link" href="">Link 2</a></li>
+            <li class="nav-link"><a class="nav-link" href="">Link 3</a></li>
+        </ul>
+    </div><br>
+
+
+    <!-- Vertical Nav -->
+     <div class="container mt-3">
+        <h2 class="text-white">Vertical Nav</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="">Link1</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="">Link2</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="">Link3</a>
+            </li>
+        </ul>
+     </div><br>
+
+
+     <!-- Navigation Tabs -->
+      <div class="container mt-3">
+          <h2 class="text-white">Nav Tabs</h2>
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+      </div><br>
+
+
+      <!-- Navigation Pill -->
+       <div class="container mt-3">
+        <h2 class="text-white">Nav Pill</h2>
+         <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="">Link1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Link2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Link3</a>
+            </li>
+         </ul>
+       </div><br>
+
+       <!-- justify Pills -->
+        <div class="container mt-3">
+            <h2 class="text-white">Justified Pills</h2>
+            <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Link1</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="">Link2</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">Link3</a>
+                </li>
+            </ul>
+        </div>
+        <br>
+
+        <!-- Justify Tabs -->
+        <div class=" container mt-3 ">
+            <h2 class=" text-white ">Justify Tabs </h2>
+            <ul class=" nav nav-tabs nav-justified ">
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Links1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Links2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">Links3</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <br><br>
+
+        <!-- Pill With Dropdown -->
+        <div class="container">
+            <h2>Pill with Dropdown</h2>
+            <ul class="nav nav-pills">
+                
+                <li class="nav-items">
+                    <a class="nav-link active" href="">Active Link</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="" class="dropdown-item">Link1</a></li>
+                        <li><a href="" class="dropdown-item">Link2</a></li>
+                        <li><a href="" class="dropdown-item">Link3</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-items">
+                    <a class="nav-link disabled" href="">Disabled</a>
+                </li>
+            </ul>     
+        </div>
+
+        <br><br>
+
+        <!-- Tabs with Dropdown -->
+
+        <div class="container">
+            <h2>Tabs with Dropdown</h2>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active " href="">Active Link</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="">Link1</a>
+                        </li>
+                        <li >
+                            <a class="dropdown-item" href="">Link2</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="">Link3</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="">Disabled</a>
+                </li>
+
+                
+
+            </ul>
+        </div>
+
+        
+
+
+
+    
+
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>
+
+</body>
+</html>

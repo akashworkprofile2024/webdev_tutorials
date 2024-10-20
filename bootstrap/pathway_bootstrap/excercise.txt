@@ -1,0 +1,338 @@
+1. Use a Bootstrap class to center the following text:
+
+<p class="text-center">Hello World!</p>
+
+
+2. Use a display class to make the <h1> element stand out more than normal headings (larger font-size and lighter font-weight):
+    
+    <h1 class="display-1">My Heading</h1>
+
+3.Use a Bootstrap class to set the following text to upper case:
+  
+  <p class="text-uppercase">Hello World!</p>
+
+4. Use a contextual class to set the text color of the <p> element to "orange":
+   
+   <p class="text-warning">Hello World!</p>
+  
+5. Use a contextual class to set the background color of the <p> element to "light grey":
+   
+   <p class="bg-light">Hello World!</p>
+
+6.Use a Bootstrap class to shape the image as a circle.
+  rounded-circle
+
+7.Use a Bootstrap class to add rounded corners on the image.
+  rounded
+
+8. Use a Bootstrap class to shape the image as a "thumbnail".
+   img-thumbnail   
+
+9. Add a class attribute to style the table as a basic Bootstrap table.
+   class="table"
+
+10.Add zebra-stripes to the table.
+   class="table table-striped" 
+   
+11. Add a class that will add borders on all sides of the table and cells.
+   class="table table-bordered" 
+
+12. Add a class that will enable a hover state on the table rows.
+   class="table table-hover"
+
+13. Use contextual classes to add the following colors to the rows:
+
+First row green   class="table-success"
+Second row red  class="table-danger"
+Last row blue     class="table-primary"
+
+14. Add a Bootstrap "alert" class to display the result of a successful action.
+   
+   class="alert alert-success"
+
+15. Add the appropriate Bootstrap class to make the alert message closable.
+   
+  <div class="alert alert-success alert-dismissible ">
+  <button class="btn-close" data-bs-dismiss="alert"></button>
+  Blah blah blah.
+</div>
+
+16.Add a Bootstrap class to style the button properly as a "danger" button.
+   class="btn btn-danger"
+
+17. Add a Bootstrap class to set the size of the first button to "large" and the last button to "small".
+
+   class="btn btn-danger btn-lg"
+   class="btn btn-danger btn-sm"
+
+18. Add a Bootstrap class to let the button span the entire width of the parent element.
+   
+   class="btn btn-danger btn-block"
+
+19. Add a Bootstrap class to group the buttons together.
+   class="btn btn-danger btn-group"
+
+20. Size all the buttons in the group with the correct class to make them "large".
+    <div class="btn-group btn-group-lg ">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Sony</button>
+   </div>
+     
+21. Add a Bootstrap class to group the buttons vertically.    
+
+     <div class="btn-group btn-group-vertical">
+        <button class="btn btn-primary">Apple</button>
+        <button class="btn btn-primary">Samsung</button>
+        <button class="btn btn-primary">Sony</button>
+   </div>
+
+22. Fill in the missing part to make a badge of the span element:
+
+    <span class="badge bg-secondary">New Comment</span>
+
+23.Fill in the missing part to make a green badge of the span element, by using a contextual class:
+
+    <span class="badge bg-success ">New Comment</span>
+   
+24. Fill in the missing parts to create a "pill" bagde:
+    
+    <span class="badge rounded-pill  bg-secondary">New Comment</span>
+
+25. Add the correct classes to make this HTML code behave as a progress bar.
+   
+        <div class="progress">
+            <div class="progress-bar"
+                style="width:70%">
+            </div>
+        </div>
+
+26. Use a "contextual class" to make the progress bar green.
+
+    <div class="progress">
+  <div class="progress-bar bg-success "
+    style="width:70%">
+  </div>
+</div>
+      
+27. Use the correct class name to add stripes to the progress bar.
+
+    <div class="progress">
+  <div class="progress-bar progress-bar-striped "
+    style="width:70%">
+  </div>
+</div>
+
+28. Use the correct class name to animate the progress bar.
+
+    <div class="progress">
+  <div class="progress-bar progress-bar-striped progress-bar-animated "
+    style="width:70%">
+  </div>
+</div>
+
+29. Fill in the missing part to create a spinner/loader:
+
+    <div class="spinner-border"></div>
+ 
+30. Fill in the missing part to create a "loader" that "grows" instead of "spin":
+
+    <div class="spinner-grow"></div>
+
+40. Add the correct class name to transform the list below into a pagination menu.    
+      
+      <ul class="pagination">
+  <li class="page-item"><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-lin" href="#">2</a></li>
+</ul>
+      
+      
+41. Add a class to "highlight" the first link in the list:
+
+     <ul class="pagination">
+  <li class="page-item active "><a class="page-link" href="#">1</a></li>
+  <li class="page-item"><a class="page-link" href="#">2</a></li>
+  <li class="page-item"><a class="page-link" href="#">3</a></li>
+</ul>
+
+
+42. Add the correct class name to transform the list below into a breadcrumb menu.
+
+  <ul class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Photos</a></li>
+  <li class="breadcrumb-item"><a href="#">Italy</a></li>
+  <li class="breadcrumb-item"><a href="#">Rome</a></li>
+</ul>
+
+43.Add the correct class name to transform the list below into a list group.
+  
+  <ul class="list-group">
+  <li class="list-group-item">First item</li>
+  <li class="list-group-item">Second item</li>
+  <li class="list-group-item">Third item</li>
+</ul>
+
+44. Add the correct class to display the list items horizontally instead of vertically:
+
+<ul class="list-group list-group-horizontal ">
+  <li class="list-group-item">First item</li>
+  <li class="list-group-item">Second item</li>
+  <li class="list-group-item">Third item</li>
+</ul>
+
+
+45. Fill in the missing parts to create a card.
+    
+    <div class="card">
+  <div class="card-body">Basic card</div>
+</div>
+
+
+46. Fill in the missing parts to create a card with a header, content and footer:
+
+
+<div class="card">
+  <div class="card-header">Header</div>
+  <div class="card-body">Content</div>
+  <div class="card-footer">Footer</div>
+</div>
+
+47. Add the required classes and attributes to create a dropdown list.
+
+
+<div class="dropdown">
+  <button type="button" class="btn btn-primary dropdown-toggle " data-bs-target="dropdown" >
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Link 1</a></li>
+    <li><a class="dropdown-item" href="#">Link 2</a></li>
+    <li><a class="dropdown-item" href="#">Link 3</a></li>
+  </ul>
+</div>
+
+
+48. Fill in the missing parts to create a "collapsible".
+
+<button data-bs-toggle=collapse"" data-bs-target="#demo">Collapsible</button>
+
+<div id="demo" class="collapse">
+Lorem ipsum dolor text....
+</div>
+
+
+49. Fill in the missing parts to create a horizontal menu.
+
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul>
+
+
+50. Fill in the missing parts to create a tab menu.
+
+
+<ul class="nav nav-tabs ">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul>
+
+
+51. Fill in the missing parts to create a pill menu.
+
+
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+</ul>
+
+
+52. Fill in the missing blanks to create a navigation bar that should become vertical on small screens:
+
+
+<nav class=" navbar navbar-expand-sm  bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+53. Fill in the missing blanks to create a vertical navigation bar:
+
+
+<nav class=" navbar bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+54. Force the navigation bar to always stay at the top of the page when scrolling:
+
+
+<nav class="navbar navbar-expand-sm bg-light  fixed-top">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+    
+
+
+
+
+
+          
+     
+
+
+
+
