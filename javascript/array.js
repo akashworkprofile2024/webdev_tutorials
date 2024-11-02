@@ -57,6 +57,7 @@ console.log('After Splice: ',newarr2,'\n','Type of Splice Array: ',typeof(newarr
 
 
 
+
 /*
  Shallow copy = using reference of original copy 
  Deep Copy = don't use refrence of original copy  
