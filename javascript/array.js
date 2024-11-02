@@ -52,12 +52,6 @@ const newarr2 = arraymain1.splice(1,3)
 console.log('After Splice: ',newarr2,'\n','Type of Splice Array: ',typeof(newarr2)),'\n';
 
 
-
-
-
-
-
-
 /*
  Shallow copy = using reference of original copy 
  Deep Copy = don't use refrence of original copy  
