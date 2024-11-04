@@ -14,7 +14,7 @@ for(const greet of greetings)
 console.log('\n')
 
 // Maps
-
+console.log('MAPS')
 const map = new Map()
 map.set('in', 'INDIA')
 map.set('USA',  'UNITES STATES OF AMERICA')
@@ -27,22 +27,89 @@ for(const key of map){
     console.log(key);
 }
 
-// destructred array
-
+// MAPS using destructred array
+console.log('MAPS using destructred array')
 for (const [key , value] of map){
     console.log(key, ':-' ,value)
 }
+console.log('\n')
 
 
+// forin on object
+console.log('forin on object')
+const myobj1 = {
+    game2:'call of duty',
+    game1:'pubg',
+    game3:'nfs',  
+}
 
-// forof on object
+for(const key1 in myobj1){
+   console.log(`${key1} : ${myobj1[key1]}`)
+}
+console.log('\n')
 
-// const myobj1 = {
-//     game1:'nfs',
-//     game2:'call of duty',
-//     game1:'pubg',   
+
+// forin loop on map
+
+// const map1 = new Map()
+// map1.set('Game1','Cod')
+// map1.set('Game2','Pubg')
+// map1.set('Game3','POP')
+
+// for (const key2 in map1) {
+//     console.log(key2)
 // }
+ 
 
-// for(const [key1, value2] of myobj1){
-//     console.log(key1,":",value2);
-// }
+// foreach loop
+console.log('foreach loop')
+const arrfy = ['java','python','c++', 'html']
+arrfy.forEach(function(storearray){
+    console.log(storearray)
+})
+
+console.log('\n')
+
+
+// foreach using array function
+console.log('foreach using array function')
+arrfy.forEach((storearrfy) => {
+   console.log(storearrfy) 
+})
+
+console.log('\n')
+
+
+// foreach loop fetching
+console.log('foreach loop fetching')
+arrfy.forEach((item,index,arr)=>{
+    console.log(item , index , arr);
+})
+console.log('\n')
+
+
+const codelang = [
+    {
+        langname:'python',
+        langfiletype:'py'
+    },
+    {
+        langname:'java',
+        langfiletype:'java'
+    },
+    {
+        langname:'c++',
+        langfiletype:'cpp' 
+    }
+]
+
+
+codelang.forEach((item , index , arr) => {
+    console.log(item, index , arr);
+})
+
+
+
+
+
+
