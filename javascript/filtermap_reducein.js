@@ -72,7 +72,26 @@ console.log(addnum)
 
 // map using chaining
 console.log('\nMap Using Chaining')
-const chanfunction = mynum.map((mulnum)=> mulnum * 10).map((addnum1)=>addnum1 + 1)
+const chanfunction = mynum
+.map((mulnum)=> mulnum * 10) //first map chain 
+.map((addnum1)=>addnum1 + 1) // second map chain
+.filter((findnum)=>findnum <= 31) // third map chain
 
-console.log('Original Number: ',mynum,'\n',chanfunction)
+console.log('Original Number: ',mynum,'\n',chanfunction,'\n')
 
+
+// Demo Array.reduce()
+
+const reducenum = [1,2,3] 
+const  totalnumber = reducenum.reduce(function(acc,currval){
+     console.log(`acc: ${acc} and currval: ${currval}`)
+     return acc + currval
+}, 0)
+
+console.log(totalnumber)
+// const arrayreduce = [1,2,3,4]
+// const initialvalue = 0;
+// const sumwithinti = arrayreduce.reduce(
+//     (accumulator, currentValue) => accumulator + currentValue, initialvalue)
+
+//     console.log(`Array Reduce: ${sumwithinti}\n`)
