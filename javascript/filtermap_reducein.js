@@ -89,9 +89,20 @@ const  totalnumber = reducenum.reduce(function(acc,currval){
 }, 0)
 
 console.log(totalnumber)
+
 // const arrayreduce = [1,2,3,4]
 // const initialvalue = 0;
 // const sumwithinti = arrayreduce.reduce(
 //     (accumulator, currentValue) => accumulator + currentValue, initialvalue)
 
 //     console.log(`Array Reduce: ${sumwithinti}\n`)
+
+// Reduce Using Arraw function
+const reducenum1 = [1,2,3] 
+
+const totalnumber1 = reducenum1.reduce((acc1 , curr1) => acc1 + curr1 , 0)
+
+console.log(totalnumber1,'\n')
+
+
+// shopping example
