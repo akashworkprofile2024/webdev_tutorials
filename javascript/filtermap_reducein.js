@@ -106,3 +106,26 @@ console.log(totalnumber1,'\n')
 
 
 // shopping example
+const shopping = [
+    {
+    itemName: 'js course',
+    price: 5000,
+    },
+    {
+        itemName2: 'php course',
+        price: 15000     
+    },
+     {
+         itemName3: 'html course',
+         price: 1000
+     },
+     {
+        itemName4: 'Javascript course',
+        price: 20000
+     },
+]
+
+
+const totalamt = shopping.reduce((acc , item)=> acc + item.price,0)
+
+console.log(`Final Amt: ${totalamt}`);
