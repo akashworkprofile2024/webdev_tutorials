@@ -21,7 +21,7 @@
     <li>Two</li>
     <li>Three</li>
    </ul>
-   
+
    <script>
         
    </script>
@@ -65,5 +65,23 @@ Query Select From page: document.querySelector('.heading')
 Query Selector For input Tag: document.querySelector('input[type="password"]')
 
 Query Selector For input Tag: document.querySelector('p:first-child')
+
+// Query SelectorAll //
+
+Query SelectorAll: document.querySelectorAll('li')
+
+Store Nodelist of li: const storeli = document.querySelectorAll('li')
+
+Color specific  List Content: storeli[0].style.background = 'red'
+
+Color All  List Content: storeli.foreach(function(l){
+      l.style.backgroundColor = 'Green'
+})
+
+
+
+
+
+
 
 -->
