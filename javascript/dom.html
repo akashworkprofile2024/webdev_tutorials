@@ -7,9 +7,21 @@
 </head>
 <body style="background-color: #212121; color:azure">
    <div>
-    <h1 id="title" class="heading">Dom Learning</h1>
+    <h1 id="title" class="heading">Dom Learning <span style="display: none;">test text</span></h1>
+    <h2>Lorem ipsum dolor sit.</h2>
+    <h3>Lorem ipsum dolor sit.</h3>
+    <h4>Lorem ipsum dolor sit.</h4>
+
     <p>Lorem ipsum dolor sit amet.</p>
    </div>
+   <input type="password" name="" id="pass">
+
+   <ul>
+    <li>one</li>
+    <li>Two</li>
+    <li>Three</li>
+   </ul>
+   
    <script>
         
    </script>
@@ -30,9 +42,28 @@ Get Class Name: document.getElementId('title').className
                                                    #function    
 Fetch All element: document.getElementId('title').getAttribute('id')
 
+Fetch class : document.getElementId('title').getAttribute('class')
+
+Set Attribute: document.getElementId('title').setAttribute('test Heading')
+
+store variable: const storevar = document.getElementId('title')
+
+                                   # Css part
+Styling store variable: storevar.style='background-color:red ; color:white'
 
 
+Fetch Text-content: title.textContent   #Show hidden Content
+Fetch Text-content: title.innerText     #Hiiden content Not Showing
+Fetch Text-content: title.innerHTML    #Show Html Value  
 
+// Query Selector //
+Query Select From page: document.querySelector('h1')
+Query Select From page: document.querySelector('h2')
+Query Select From page: document.querySelector('#title')
+Query Select From page: document.querySelector('.heading')
 
+Query Selector For input Tag: document.querySelector('input[type="password"]')
+
+Query Selector For input Tag: document.querySelector('p:first-child')
 
 -->
