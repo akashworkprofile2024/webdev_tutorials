@@ -17,9 +17,9 @@
    <input type="password" name="" id="pass">
 
    <ul>
-    <li>one</li>
-    <li>Two</li>
-    <li>Three</li>
+    <li class="mofifylistitem">one</li>
+    <li class="mofifylistitem">Two</li>
+    <li class="mofifylistitem">Three</li>
    </ul>
 
    <script>
@@ -80,8 +80,17 @@ Color All  List Content: storeli.foreach(function(l){
 
 
 
+Convert ClassName to Array 
 
+const tempclasslist = document.getElementsByClassName('mofifylistitem')
 
+Convert into Array Syntax:  Array.from(tempclasslist)
+
+Store Converted Array: const convertedarray = Array.from(tempclasslist)
+
+// Perform Some Operation on Converted Array
+
+convertedarr.forEach(function(li){li.style.color = 'orange'})
 
 
 -->
