@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_Element 2</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    
+</body>
+<script>
+    const vardiv = document.createElement('div')
+    console.log(vardiv)
+    vardiv.className = 'main'
+    
+    console.log(`Generate Random Id`);
+    const generan = vardiv.id = Math.random()*10 + 1
+    console.log(`${generan}`);
+
+    console.log(`Round Off Random Id`);
+    const roundrandom = vardiv.id = Math.round(Math.random()*10 + 1)
+    console.log(`${roundrandom}`); 
+    
+    console.log(`Set Attribute`);
+    const setvar = vardiv.setAttribute('title','generated title')         
+    console.log(`${setvar}`);
+
+    const textnode = document.createTextNode('javascript code')
+    vardiv.appendChild(textnode)
+    document.body.appendChild(vardiv)
+</script>
+</html>
