@@ -5,12 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dom element</title>
 </head>
-<body>
+<body style="background-color: #212121; color: white;">
     <div class="parent">
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wednesday</div>
+        <div class="day">Thursday</div> 
         <div class="day">Friday</div> 
+        <div class="day">saturday</div> 
     </div>
+
+    <script>
+       const storeparent =  document.querySelector('.parent')
+       console.log(storeparent);
+       console.log(storeparent.children); 
+       console.log('Access Element of Child: ',storeparent.children[0]) // access element of child
+       console.log('Access innterHtml of Child: ',storeparent.children[0].innerHTML) // access innerHTML of child
+      
+       //Access All Children of the Parent
+       console.log(`\nAccess All Child Element Using For Loop\n`) 
+      for (let i = 0; i < storeparent.children.length; i++) {
+        console.log(`${storeparent.children[i].innerHTML}`);
+      }
+
+      storeparent.children[1].style.color = 'orange'
+      console.log(`First and Second Child Element`)
+      console.log(storeparent.firstElementChild) 
+      console.log(storeparent.lastElementChild) 
+      
+      console.log(`Query Selector`);
+      const dayone = document.querySelector('.day')
+      console.log(dayone)
+      
+      console.log(`\nParent Element`);
+      console.log(dayone.parentElement)
+
+      console.log(`Element Siblings`);
+      console.log(dayone.nextElementSibling)
+
+      // Node List
+      console.log('NODES LIST : ',storeparent.childNodes)
+    
+      
+    </script>
 </body>
 </html>
