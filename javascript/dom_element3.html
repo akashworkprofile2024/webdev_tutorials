@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom element 3</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+
+<script>
+    function allotlang(lang)
+    {
+      const storeli =   document.createElement('li')
+      storeli.innerHTML = `${lang}`
+
+       document.querySelector('.language').appendChild(storeli)
+    }
+
+    allotlang("python")
+    allotlang("Java")
+    allotlang("Html")
+    allotlang('Ruby')
+
+
+    // Optimized function Approach
+    console.log(`OPtimized function approacj`);
+    function addoptilang(langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+                    
+    }
+     addoptilang('golang')
+
+
+    //  Edit
+     const secondlang = document.querySelector("li:nth-child(2)")
+     secondlang.innerHTML = 'Mojo'    
+</script>
+</html>
