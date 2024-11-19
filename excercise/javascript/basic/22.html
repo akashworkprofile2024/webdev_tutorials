@@ -1,0 +1,32 @@
+<!-- // Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    Position <input type="number" name="position" id="position">
+    <button type="button" onclick="rm_position()">remove</button>
+    <span id="display"></span>
+</form>
+</body>
+<script>
+    function rm_position(x)
+    {
+      storepos = parseInt(document.getElementById('position').value)
+      
+      part1 = x.substring(0,storepos)
+      
+      part2 = x.substring(storepos +1 , x.length)
+
+      document.getElementById('display').innerHTML=(part1+part2)
+    }
+    rm_position('java')
+    
+</script>
+</html>
