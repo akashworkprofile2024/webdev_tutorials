@@ -1,0 +1,35 @@
+<!-- Write a JavaScript program to get the difference between a given number and 13, if the number is broader than 13 return double the absolute difference.   -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.html</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Number</label>
+        <input type="number" name="userinput" id="userinput">
+
+        <button type="button" onclick="difference()">Send</button><br>
+        <pre style="font-size: x-large;">Result:<span id="target"></span> </pre>
+        
+    </form>
+</body>
+<script>
+       function difference(){
+        let store = document.getElementById('userinput').value;
+        console.log(store);
+        if(store <= 13 ){
+            let diff= 13-store;
+            document.getElementById('target').innerHTML=diff;
+            
+        }else{
+            let incdiff = 13*13
+            document.getElementById('target').innerHTML=incdiff;
+        } 
+       }
+</script>
+</html>
