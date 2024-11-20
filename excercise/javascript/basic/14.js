@@ -8,5 +8,3 @@ var filename = "adc.php";
 
 console.log(`Extension After: ${filename.split('.').pop()}`);
 
-
-
