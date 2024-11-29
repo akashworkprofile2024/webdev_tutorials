@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="ex1"><span>Normal Div: </span>This div is 300px wide.</div>
+    <br>
+
+    <div class="ex2"><span>Add Pad Feature: </span>The width of this div remains at 300px, in spite of the 50px of total left and right padding, because of the box-sizing: border-box property</div>
+
+    <style>
+        /* Normal div */
+        div.ex1{
+           background-color: blueviolet;
+           font-weight: bold;
+           color: white;
+           width: 300px;
+        }
+     
+        /* Add pad Feature with width */
+        div.ex2{
+            color: black;
+            font-weight: bold;
+            background-color: rgba(0, 0, 255, 0.3);
+            box-sizing: border-box;
+            width: 300px;
+            padding: 25px;
+        }
+        
+    </style>
+</body>
+</html>
+
+
+<!-- 
+    Padding - Shorthand Property (trbl)
+
+    padding: 25px 50px 75px 100px;
+        top padding is 25px
+        right padding is 50px
+        bottom padding is 75px
+        left padding is 100px
+
+   
+    If the padding property has 3 values:
+
+    padding: 25px 50px 75px;
+        top padding is 25px
+        right and left paddings are 50px
+        bottom padding is 75px
+
+    
+    If the padding property has 2 values:
+
+    padding: 25px 50px;
+        top and bottom paddings are 25px
+        right and left paddings are 50px
+    
+
+    If the padding property has 1 value:
+
+    padding: 25px;
+        all four paddings are 25px
+
+
+
+-->
