@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header style="background-color: blueviolet; width: 100%; border:1px solid black;" title="relative">
+          <p style="color: white; background-color: red; width: 30%; text-align: center;">Lorem ipsum dolor sit amet.</p> 
+    </header><br>
+
+    <div class="fixedconfig" style="background-color: blueviolet; text-align: center; color: white;" title="fixed">
+           Lorem ipsum dolor sit amet1 .
+    </div> <br><br>
+
+
+    <div class="container">
+       <div class="stickyconfig" style="background-color: blueviolet; text-align: center; color: white;" title="sticky">
+              Lorem ipsum dolor sit amet 2.
+       </div>
+   </div>
+
+   
+</body>
+<style>
+    p{
+        position: relative;
+        left: 35%;
+        border: 1px solid black;
+    }
+
+
+    div.fixedconfig{
+        position:fixed;
+        width: 1900px;
+    }
+
+
+    div.container{
+        background-color: red;
+    height: 2000px;
+    }
+
+    div.stickyconfig{
+         position:sticky;
+         top: 30px;
+         
+
+    }
+
+
+   
+
+     
+</style>
+</html>
+
+
+<!-- 
+static:Static positioned elements are not affected by the top, bottom, left, and right properties.
+An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page:
+
+relative:  Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+fixed:An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element.
+A fixed element does not leave a gap in the page where it would normally have been located.
+
+absolute:
+
+sticky:
+
+ -->
