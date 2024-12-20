@@ -5,7 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body style="background-color: #212121; color: white;">
+    <p id="stringlength"></p>
+    <p id="string_charat"></p>
+    <p id="String_charcodeat"></p>
+    <p id="String_at"></p>
+    <p id="property_access"></p>
+    <p id="string_slice"></p>
+    <p id="string_slice2"></p>
+    <p id="string_slice3"></p>
+    <p id="string_slice4"></p>
+    <p id="string_substring1"></p>
+    <p id="toUpperCase"></p>
+    <p id="toLowerCase"></p>
+    <p id="concate_string"></p>
+    <p id="padding_string"></p>
+    <p id="padding_string1"></p>
+    <p id="padding_string_end"></p>
+    <p id="string_repeat"></p>
 </body>
+
+<!-- JAVASCRIPT CODE -->
+<script>
+
+// STRING LENGTH
+let demo = 'demostring'
+document.getElementById('stringlength').innerHTML =  `String lenght: ${demo.length}`;
+
+
+// EXTRACTING STRING CHARACTERS { String charAt() , String charCodeAt(), String at(), Property Access [ ] }
+
+// STRING charAt()
+let text = 'Akash'
+document.getElementById('string_charat').innerHTML = ` String charAt: ${text.charAt(1)}`;
+
+// STRING charCodeAt()
+let text1 = 'Akash'
+document.getElementById('String_charcodeat').innerHTML = `String charCodeAt: ${text1.charCodeAt(1)}`
+
+// STRING at()
+let text2 = 'Akash'
+document.getElementById('String_at').innerHTML = `String at: ${text2.at(3)}`
+
+// PROPERTY ACCESS
+let text3 = 'Akash'
+document.getElementById('property_access').innerHTML = `Property access: ${text3[4]}`
+
+
+// EXTRACTING STRING PARTS{ slice(start, end) , substring(start, end), substr(start, length)}
+
+// STRING SLICE()
+let text4 = 'Apple,Orange,Kiwi'
+let store = text4.slice(6,12)
+let store2 = text4.slice(6)
+let store3 = text4.slice(-5)
+let store4 = text4.slice(-11,-5)
+document.getElementById('string_slice').innerHTML = `String_Slice: ${store}`
+document.getElementById('string_slice2').innerHTML = `String_Slice: ${store2}`
+document.getElementById('string_slice3').innerHTML = `String_Slice: ${store3}`
+document.getElementById('string_slice4').innerHTML = `String_Slice: ${store4}`
+
+
+// STRING SUBSTRING()
+let store5 = text4.substring(0,5)
+document.getElementById('string_substring1').innerHTML = `String_Substring: ${store5}`
+
+// CONVERTING TO UPPER AND LOWER CASE
+let capletter = 'akash'
+document.getElementById('toUpperCase').innerHTML = `String_Uppercase: ${capletter.toUpperCase()}`
+
+let small_letter = 'AKASH'
+document.getElementById('toLowerCase').innerHTML =  `String_Lowercase: ${small_letter.toLowerCase()}`
+
+// STRING CONCATE
+let text5 = 'Akash'
+let text6 = 'Biswas'
+let concate_string = text5.concat(" "+text6)
+document.getElementById('concate_string').innerHTML = `String_Concate: ${concate_string}` 
+
+// STRING PADDING
+let text7 = "5"
+let padded = text7.padStart(4,'0');
+document.getElementById('padding_string').innerHTML = `String_padding_Start: ${padded}`
+
+//  STRING PADDING NUMBER
+
+// PADDING START
+let text8 = 6
+let convert = text8.toString()
+let padded1 = convert.padStart(4,'0')
+document.getElementById('padding_string1').innerHTML = `String_Padding_Start: ${padded1}`
+
+// PADDING END  
+let text9 = 5
+let store1 = text9.toString()
+let padded2 = store1.padEnd(4,'0')
+document.getElementById('padding_string_end').innerHTML = `String_Padding_End: ${padded2}`
+
+
+// STRING REPEAT()
+let text10 = 'Akash'
+let result = text10.repeat(2)
+document.getElementById('string_repeat').innerHTML = `String_Repeat: ${result}`
+
+</script>
 </html>
+
+<!-- 
+String length
+String charAt()
+String charCodeAt()
+String at()
+String [ ]
+String slice()
+String substring()
+String substr()
+See Also:
+String Search Methods
+String Templates
+String toUpperCase()
+String toLowerCase()
+String concat()
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String repeat()
+String replace()
+String replaceAll()
+String split()
+
+
+EXTRACTING STRING CHARACTERS { String charAt() , String charCodeAt(), String at(), Property Access [ ] }
+
+The at(position) Method
+The charAt(position) Method
+The charCodeAt(position) Method
+Using property access [] like in arrays
+
+
+
+
+-->
