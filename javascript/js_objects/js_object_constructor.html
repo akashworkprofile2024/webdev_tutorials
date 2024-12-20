@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <p id="display2"></p>
+</body>
+<script>
+    // CONSTRUCTOR FUNCTION METHODS
+    function emplist(fname, lname , email){
+        this.fname = fname;
+        this.lname = lname;
+        this.email = email;
+        this.fullname = function(){
+            return this.fname+" "+this.lname
+        };
+
+        this.emailfun = function(){
+            return "Email:"+ this.email;
+        }
+    }
+
+    const emp1 = new emplist('Rahul','Das','rahul.das@gmail.com')
+    document.getElementById('display').innerHTML = "FullName: "+ emp1.fullname() +" "+ emp1.emailfun();
+
+
+    // ADDING A METHOD TO A CONSTRUCTOR
+    
+    function person(firstname,lastname,emailing){
+         this.firstname = fristname;
+         this.lastname = lastname;
+         this.emailing = emailing;
+    }
+
+    const girl = new person('Sanaya','Forester','sanaya.forester@2gmail.com')
+
+    person.prototype.changname = function(name){
+        this.lastname = name;
+    }
+
+    // Change Name
+    girl.changname('Rathore')
+
+    // Display Name
+
+    document.getElementById('display2').innerHTML = "Name:" +person.firstname+" "+girl.lastname; 
+
+</script>
+</html>
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="showdisplay"></p>
+    <p id="showdisplay2"></p>
+    <p id="showdisplay3"></p>
+    <p id="showdisplay4"></p>
+    <p id="showotherdisplay"></p>
+    <p id="showdisplay5"></p>
+    <p id="checkstring"></p>
+
+</body>
+<script>
+    let x = 'string1';
+    let y =  'string2';
+    document.getElementById('showdisplay').innerHTML = 'Normal String: '+x;
+    document.getElementById('showdisplay2').innerHTML = `Template String: ${y}`;
+    
+    // STRING LENGTH
+    let l1 = 'Akash';
+    document.getElementById('showdisplay3').innerHTML = "String Length: "+l1.length ;
+    
+    // ESCAPE CHARACTERS
+    let l2 = "javascript the is \"backend-program\"";
+    document.getElementById('showdisplay4').innerHTML = "Escape Characters: "+l2;
+
+    
+    // JAVASCRIPT STRING AS OBJECTS
+    let name = 'name';
+    let z = new String('name');
+
+    document.getElementById('showdisplay5').innerHTML = `Name variable: ${typeof(name)} <br> Z variable: ${typeof(z)} `;
+    document.getElementById('checkstring').innerHTML = "Check Type: "+(name === z);   // JAVASCRIPT OBJECT NEVER COMPARED ALWAYS RETURN FALSE
+ 
+</script>
+</html>

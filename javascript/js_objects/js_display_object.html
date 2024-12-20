@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Display Object</title>
+</head>
+<body>
+    <p id="display1"></p>
+    <p id="display2"></p>
+    <p id="display3"></p>
+    <p id="display4"></p>
+    <p id="display5"></p>
+    <p id="display6"></p>
+</body>
+<script>
+    const person = {
+        fname: 'john',
+        lname: 'Dept',
+        city:'New York'
+    }
+
+    // HOW TO  DISPLAY JAVASCRIPT OBJECTS?
+    document.getElementById('display1').innerHTML = person;
+
+    // DISPLAYING OBJECT PROPERTIES
+    document.getElementById('display2').innerHTML = 'Name: '+person.fname+" "+'Lname: '+person.lname;
+
+    // DISPLAYING PROPERTIES IN A LOOP
+    let details = '';
+    for (let x in person){
+        details += person[x]+" "
+    };
+    document.getElementById('display3').innerHTML = details;
+
+    // USING OBJECTS.VALUES()
+    const myarr = Object.values(person) // create an array
+    document.getElementById('display4').innerHTML = myarr;
+
+    // USING OBJECT ENTERIES()
+    let storedetails = '';
+    for(let [key  , value] of Object.entries(person)){
+        storedetails += key + ": " + value + "<br>";
+    }
+    document.getElementById('display5').innerHTML = storedetails
+
+    
+
+    // USING JSON.STRINGFY()
+
+    const emp = {
+        name:'Yaru',
+        lname:'Roshi',
+        dept:'IT Engineer',
+        email:'yaru.roshi@gmail.com'
+    }
+
+    let mystring = JSON.stringify(emp);
+    document.getElementById('display6').innerHTML = mystring;
+
+
+</script>
+</html>
