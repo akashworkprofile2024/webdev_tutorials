@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <p id="quote_inside_string"></p>
+    <p id="multilines_strings"></p>
+    <p id="interpolation_string"></p>
+    <p id="expression_substitutions"></p>
+    <p id="html_string"></p>
+</body>
+<script>
+    // QUOTE INSIDE STRING
+    let text = `Hello "world"`
+    document.getElementById('quote_inside_string').innerHTML = text;
+
+    // MULTILNE STRING
+    let text1 = `The quick
+    brown fox`;
+    document.getElementById('multilines_strings').innerHTML = text1;
+
+    // VARIABLE SUBSTITUTIONS STRINGS
+    let fname = 'Akash';
+    let lname = 'Biswas';
+    document.getElementById('interpolation_string').innerHTML = `Name: ${fname}  Lname: ${lname}`
+
+    // EXPRESSION SUBSTITUTIONS
+    let price = 10;
+    let VAT = 0.25;
+    let total_price = `Total: ${price *(1+VAT).toFixed(2)}`
+    document.getElementById('expression_substitutions').innerHTML = total_price
+
+
+    let header = 'TEMPLATE STRING';
+    let tags = ['template string', 'javascript', 'java'];
+
+    let html = `<h2>${header}</h2><ul>`;
+    for (const x of tags)
+{
+    html += `<li>${x}</li>`
+}
+
+html += `</ul>`;
+document.getElementById('html_string').innerHTML = html
+
+
+</script>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=66666666666, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <p id="string_indexof"></p> 
+    <p id="string_lastindexof"></p> 
+    <p id="string_notfound"></p>
+    <P id="string_search"></P>
+    <P id="string_search1"></P>
+    <p id="string_match"></p>
+    <p id="string_match1"></p>
+    <p id="string_match2"></p>
+    <p id="string_match3"></p>
+    <p id="string_matchall"></p>
+    <p id="string_matchall1"></p>
+    <P id="string_includes"></P>
+    <p id="string_includes1"></p>
+    <p id="string_startswith"></p>
+    <p id="string_endwith"></p>
+</body>
+<script>
+    /* STRING IDEX_OF */
+    let string1 = 'mysql database , mongodb database' 
+    let store1 = string1.indexOf('database');
+    let store2 = string1.lastIndexOf('database');
+    let store3  = string1.indexOf('John');    // Same result on lastIndexof search method
+    document.getElementById('string_indexof').innerHTML = `STRING_INDEXOF: ${store1}`;
+    document.getElementById('string_lastindexof').innerHTML = `STRING_LASTINDEXOF: ${store2}`
+    document.getElementById('string_notfound').innerHTML = `STRING NOT FOUND BY INDEXOF: ${store3}`
+    
+    // STRING SEARCH
+    let store4 = string1.search('database')
+    document.getElementById('string_search').innerHTML = `STRING SEARCH: ${store4}`
+    let store5 = string1.search(/database/)
+    document.getElementById('string_search1').innerHTML = `STRING SEARCH: ${store5}`
+    
+    
+    // STRING MATCH
+    let string2 = 'The rain in SPAIN stays mainly in the plain'
+    let store6 = string2.match('ain');
+    let store7 = string2.match(/ain/);
+    let store8 = string2.match(/ain/g);
+    let store9 = string2.match(/ain/gi);
+    document.getElementById('string_match').innerHTML = `STRING MATCH: ${store6.length},${store6}` 
+    document.getElementById('string_match1').innerHTML = `STRING MATCH: ${store7.length},${store7}` 
+    document.getElementById('string_match2').innerHTML = `STRING MATCH: ${store8.length},${store8}`
+    document.getElementById('string_match3').innerHTML = `STRING_MATCH_CASE_SENSITIVE: ${store9.length},${store9}`
+    
+
+    // STRING MATCH_ALL()
+    let string3 = 'I love cats. Cats are very easy to love. Cats are very popular'
+    let store10 = string3.matchAll(/Cats/gi)
+    document.getElementById('string_matchall').innerHTML =`STRING_MATCHALL: ${Array.from(store10)}`
+
+
+    // STRING INCLUDES
+    let store11 = string3.includes('love');
+    document.getElementById('string_includes').innerHTML = `STRING_INCLUDES: ${store11}` 
+
+    // CHECK STRING INCLLUDES
+    let store12 = string3.includes('love',3); // CHECK  THE POSTION OF THE WORK IS TRUE OR NOT
+    document.getElementById('string_includes1').innerHTML = `STRING_INCLUDES_CHECK: ${store12}`
+    
+
+    // STRING START'S WITH
+    let string4 = 'Akash Biswas'
+    let store13 = string4.startsWith('Akash')
+    let store13_edit = string4.startsWith('Akash',1)
+    document.getElementById('string_startswith').innerHTML = `STRING_STARTS_WITH: ${store13}`
+    document.getElementById('string_startswith_edit').innerHTML = `STRING_STARTS_WITH ${store13_edit}`
+    // STRING ENDS WITH
+    let store14 = string4.endsWith('Biswas')
+    document.getElementById('string_endwith').innerHTML = `STRING_ENDS_WITH: ${store14}`
+</script>
+</html>
+
+
+<!-- 
+STRING_INDEXOF: The lastIndexOf() method returns the index of the FIRST occurrence of a specified text in a string:
+STRING LASTINDEX_OF:  The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+If a regular expression does not include the g modifier (global search), match() will return only the first match in the string.
+g: global search
+i: case sensitive search
+
+STRING INCUDES: The includes() method returns true if a string contains a specified value.
+
+The startsWith() method returns true if a string begins with a specified value.
+
+
+
+-->

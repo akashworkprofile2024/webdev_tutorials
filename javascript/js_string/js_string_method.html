@@ -26,6 +26,9 @@
     <p id="string_replace"></p>
     <p id="string_replace2">java</p>
     <p id="string_replace3"></p>
+    <p id="global_replace"></p>
+    <p id="replace_all"></p>
+    <p id="string_split"></p>
 </body>
 
 <!-- JAVASCRIPT CODE -->
@@ -120,8 +123,27 @@ let text12 = document.getElementById('string_replace2').innerHTML;
 document.getElementById('string_replace2').innerHTML = text12.replace("JAVA","javascript")
 
 let text13 = "Please visit Microsoft!";
-let newText = text13.replace(/MICROSOFT/i, "W3Schools");
-document.getElementById('string_replace3').innerHTML = newText;
+let result2 = text13.replace(/MICROSOFT/i, "W3Schools");
+document.getElementById('string_replace3').innerHTML = result2;
+
+// REPLACING GLOBAL MATCH
+let text14 = 'please visit Microsoft webiste and Microsoft cloud tech ';
+let result3 = text14.replace(/Microsoft/g,'Amazon');
+document.getElementById('global_replace').innerHTML = result3;
+
+
+// REPLACING ALL
+let text15 = 'Cats, cats,'
+text15 = text15.replaceAll("Cats",'Dogs');
+text15 = text15.replaceAll("cats",'dogs');
+document.getElementById('replace_all').innerHTML = `Replace All: ${text15}`
+
+
+// JAVASCRIPT STRING SPLIT()
+let text16 = 'a|b|c|d|e|f';
+const myarr = text16.split('|');
+document.getElementById('string_split').innerHTML = `String_split: ${myarr}`
+
 
 
 
