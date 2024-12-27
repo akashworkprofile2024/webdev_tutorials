@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<body style="background-color: #212121;">
+    <!-- ITEMS LIST -->
+    <main class="mt-1"> 
+
+        <div class="container text-cennter">
+          <img class="img-fluid" width="65" src="../image/mobile.png" alt=""><br>
+          <label for="atc">Mobile</label><br>
+          <input type="button" value="Add item" onclick="add('mobile')"><br><br>
+        </div>
+        
+        <div class="container  ">
+            <img class="img-fluid" width="100" src="../image/laptop.png" alt=""><br>   
+            <label class="text-center" for="atc">Laptop</label><br>
+            <input type="button" value="Add item" onclick="add('laptop')"><br><br>
+        </div>
+    
+        <div class="container">
+            <img src="../image/headphones.png" width="100" alt=""> <br>
+           <label for="atc">Headphone</label><br>
+           <input type="button" value="Add item" onclick="add('headphone')"><br><br>   
+        </div> 
+    
+        <div class="container">
+            <img src="../image/monitor.png" class="img-fluid" width="100" alt=""><br>
+            <label for="atc">Monitor</label><br>
+            <input type="button" value="Add item" onclick="add('monitor')"><br>
+        </div><br>
+
+
+        <!-- CART -->
+         <div class="container bg-danger">
+                 <div class="col-4 float-end text-center  " id="cart" style='background-color: blanchedalmond;'>
+                       <span class="fw-bolder">ITEMS</span><br>
+                         <ol class="text-dark fw-bold me-4 bg-danger" id="hello"></ol>
+                        <span>Total Items: <span id="total_items" class="fw-medium"></span></span><br>
+                         <span id="border"></span> 
+                        
+                </div>
+         </div>
+</main>
+</body>
+<script>
+    var defaultitem_num = 0;
+document.getElementById('total_items').innerText = defaultitem_num;
+function add(val){
+    document.getElementById('hello').innerHTML +="<li>"+val+"<input type='button' value='x' onclick=remove()></input></li>";
+    defaultitem_num=defaultitem_num+1; 
+    document.getElementById('total_items').innerText = defaultitem_num;
+    document.getElementById('border').innerHTML = '=============='
+    
+}
+
+
+// remove items
+
+function remove(){
+    var listitem =  document.getElementsByTagName('li');
+    for(var i=0 ; i<listitem.length; i++)
+    {
+        listitem[i].onclick=function(){
+             this.parentNode.removeChild(this);  
+        }   
+    }
+
+    
+}
+</script>
+</html>
