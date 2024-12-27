@@ -5,23 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: #212121; color: white;">
     <p id="tostring"></p>
+    <p id="exponential_method"></p>
+    <p id="exponential_method2"></p>
+    <p id="exponential_method3"></p>
+    <p id="exponential_method4"></p>
+    <p id="exponential_method5"></p>
+    <p id="fixed_method"></p>
+    <p id="fixed_method2"></p>
+    <p id="fixed_method3"></p>
+    <P id="precision_method"></P>
+    <P id="precision_method2"></P>
+    <P id="precision_method3"></P>
+    <p id="valueof"></p>
+    <p id="number_metod"></p>
+    <p id="number_metod2"></p>
+    <p id="number_method3"></p>
+    <p id="parseInt_demo"></p>
+    <p id="parsefloat_demo"></p>
+    <P id="number_isinteger"></P>
+    <P id="number_issafeinteger"></P>
+    <P id="number_prasefloat"></P>
+    <p id="number_prasefloat1"></p>
+    <p id="number_praseint"></p>
+    <p id="number_praseint1"></p>
 </body>
 <script>
 //    TOSTRING()
 let x = 125;
 let x_convert = x.toString();
 document.getElementById('tostring').innerHTML  = `TO_STRING: ${x_convert} Type:  ${typeof(x_convert)}`;
+
+// TOEXPONENTIAL()
+let y = 9.256;
+let y_convert = y.toExponential();
+let y_convert2 = y.toExponential(2);
+let y_convert3 = y.toExponential(3);
+let y_convert4 = y.toExponential(4);
+let y_convert5 = y.toExponential(5);
+document.getElementById('exponential_method').innerHTML = `EXPONENTIAL METHOD(): ${y_convert}`
+document.getElementById('exponential_method2').innerHTML = `EXPONENTIAL METHOD(2): ${y_convert2}`
+document.getElementById('exponential_method3').innerHTML = `EXPONENTIAL METHOD(3): ${y_convert3}`
+document.getElementById('exponential_method4').innerHTML = `EXPONENTIAL METHOD(4): ${y_convert4}`
+document.getElementById('exponential_method5').innerHTML = `EXPONENTIAL METHOD(5): ${y_convert5}`
+
+
+// TO FIXED METHOD
+let z = 9.656;
+let z_convert = z.toFixed(0)
+let z_convert2 = z.toFixed(2)
+let z_convert3 = z.toFixed(3)
+document.getElementById('fixed_method').innerHTML = `FIXED_METHOD(0): ${z_convert}`; 
+document.getElementById('fixed_method2').innerHTML = `FIXED_METHOD(2): ${z_convert2}`; 
+document.getElementById('fixed_method3').innerHTML = `FIXED_METHOD(3): ${z_convert3}`;
+
+
+// PRECISION METHOD
+
+let s = 9.656;
+let s_convert = s.toPrecision();
+let s_convert2 = s.toPrecision(2);
+let s_convert3 = s.toPrecision(3);
+document.getElementById('precision_method').innerHTML = `PRECISION_METHOD: ${s_convert}`
+document.getElementById('precision_method2').innerHTML = `PRECISION_METHOD(2): ${s_convert2}`
+document.getElementById('precision_method3').innerHTML = `PRECISION_METHOD(3): ${s_convert3}`
+
+// VALUE OF
+let f = 125
+let f_store = f.valueOf();
+document.getElementById('valueof').innerHTML = `VALUE_OF: ${typeof(f_store)}`
+
+
+// NUMBER METHOD
+let num1 = '12'
+let num1_convert = Number(num1)
+let date_convert = new Date('2000-05-22')
+let date_store = Number(date_convert)
+document.getElementById('number_metod').innerHTML = `WITHOUT_NUMBER_METHOD: ${ num1 +' '+typeof(num1)}`;
+document.getElementById('number_metod2').innerHTML = `WITH_NUMBER_METHOD: ${ num1_convert +' '+typeof(num1_convert)}`;
+document.getElementById('number_method3').innerHTML = `WITH_NUMBER_METHOD_DATE: ${date_store+' '+typeof(date_store)}`;
+
+
+
+// PARSEINT_METHOD()
+document.getElementById('parseInt_demo').innerHTML = 'PARSE INT METHHOD: ' + parseInt('-10') + '<br>' + parseInt('-10.33') + '<br>' + parseInt('10') + '<br>' + parseInt('10.33') + '<br>' + parseInt('10 6') + '<br>' + parseInt('10 years') + '<br>' + parseInt('years 10')
+
+// PARSEFLOAT()
+document.getElementById('parsefloat_demo').innerHTML = 'PARSE FLOAT METHOD: ' + parseFloat(10) + '<br>' + parseFloat('10.33') + '<br>' + parseFloat(' 10 20 30') + '<br>' + parseFloat('10 Years') + '<br>' + parseFloat('years 10');
+
+
+// NUMBER OBJECTS METHODS
+
+// NUMBER_ITSINTEGER
+let num2 = Number.isInteger(10) 
+let num3 = Number.isInteger(10.5) 
+document.getElementById('number_isinteger').innerHTML = `NUMBER ITSINTEGERR: ${num2} ${num3}`
+
+// NUMBER_ISSAFE_INTEGER
+let num4 = Number.isSafeInteger(10);
+let num5 = Number.isSafeInteger(12345678901234567890);
+document.getElementById('number_issafeinteger').innerHTML = `NUMBER IS_SAFE_INTEGER: ${num4} ${num5}`
+
+// NUMBER_PRASE_FLOAT
+let num6 = Number.parseFloat('10')
+let num7 = Number.parseFloat('10.5')
+document.getElementById('number_prasefloat').innerHTML = `NUMBER_PRASE_FLOAT: ${num6} TYPE: ${typeof(num6)}`
+document.getElementById('number_prasefloat1').innerHTML = `NUMBER_PRASE_FLOAT: ${num7} TYPE: ${typeof(num7)}`
+
+
+// NUMBER PRASEINT
+let num8 = Number.parseInt('-10')
+let num9 = Number.parseInt('10, 20,  30')
+document.getElementById('number_praseint').innerHTML = `NUMBER PRASE INT: ${num8} TYPE: ${typeof(num8)}`
+document.getElementById('number_praseint1').innerHTML = `NUMBER PRASE INT: ${num9} TYPE: ${typeof(num9)}`
 </script>
 </html>
 
 <!-- 
 
-toString()	Returns a number as a string
-toExponential()	Returns a number written in exponential notation
-toFixed()	Returns a number written with a number of decimals
-toPrecision()	Returns a number written with a specified length
-valueOf()	Returns a number as a number
+toString():	Returns a number as a string
+toExponential():	Returns a number written in exponential notation
+toFixed():	Returns a number written with a number of decimals
+toPrecision():	Returns a number written with a specified length
+valueOf():	Returns a number as a number
+parseInt(): parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
 
+
+//NUMBER OBJECT METHODS
+
+Number.isInteger()	Returns true if the argument is an integer
+Number.isSafeInteger()	Returns true if the argument is a safe integer
+Number.parseFloat()	Converts a string to a number
+Number.parseInt()	Converts a string to a whole number
+Number.parseFloat() parses a string and returns a number.
+Spaces are allowed. Only the first number is returned:
+The Number methods Number.parseInt() and Number.parseFloat()
+are the same as the
+Global methods parseInt() and parseFloat().
+The purpose is modularization of globals (to make it easier to use the same JavaScript code outside the browser).
 -->
