@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white;">
+    <p id="epsilon_number"></p>
+    <p id="max_value_number"></p>
+    <p id="min_value_number"></p>
+    <p id="maxsafe_integer"></p>
+    <p id="minsafe_integer"></p>
+    <p id="postive_infinity"></p>
+    <p id="postive_infinity1"></p>
+    <p id="negative_infinity"></p>
+    <p id="negative_infinity2"></p>
+    <p id="no_number"></p>
+</body>
+<script>
+    let x = Number.EPSILON;
+    let y = Number.MAX_VALUE;
+    let z = Number.MIN_VALUE
+    let v = Number.MAX_SAFE_INTEGER;
+    let c = Number.MIN_SAFE_INTEGER;
+    let r = Number.POSITIVE_INFINITY;
+    let r2 = 1/0;
+    let t = Number.NEGATIVE_INFINITY;   
+    let t1 = -1/10;
+    let nonum = Number.NaN
+
+    document.getElementById('epsilon_number').innerHTML=`JAVASCRIPT_EPSILON: ${x}`;
+    document.getElementById('max_value_number').innerHTML=`MAX_VALUE_NUMBER: ${y}`;
+    document.getElementById('min_value_number').innerHTML=`MIN_VALUE_NUMBER: ${z}`;
+    document.getElementById('maxsafe_integer').innerHTML=`MAX_SAFE_INTEGER: ${v}`;
+    document.getElementById('minsafe_integer').innerHTML=`MIN_SAFE_INTEGER: ${c}`;
+    document.getElementById('postive_infinity').innerHTML=`POSITIVE_INFINITY: ${r}`;
+    document.getElementById('postive_infinity1').innerHTML=`POSITIVE_INFINITY_2(1/0): ${r2}`;
+    document.getElementById('negative_infinity').innerHTML=`NEGATIVE_INFINITY: ${t}`;
+    document.getElementById('negative_infinity2').innerHTML=`NEGATIVE_INFINITY_2(-1/0): ${t1}`;
+    document.getElementById('no_number').innerHTML=`NOT A NUMBER: ${nonum}`;
+</script>
+    
+</html>
+
+<!--
+
+EPSILON 	The difference between 1 and the smallest number > 1.
+MAX_VALUE 	The largest number possible in JavaScript
+MIN_VALUE 	The smallest number possible in JavaScript
+MAX_SAFE_INTEGER 	The maximum safe integer (253 - 1)
+MIN_SAFE_INTEGER 	The minimum safe integer -(253 - 1)
+POSITIVE_INFINITY 	Infinity (returned on overflow)
+NEGATIVE_INFINITY 	Negative infinity (returned on overflow)
+NaN 	A "Not-a-Number" value
+-->
+

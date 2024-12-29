@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: #212121; color: white;">
+       <p id="create_array"></p>
+       <p id="put_data_on_array"></p>
+       <p id="KEYWORD_new"></p>
+       <p id="accessing_array_elements"></p>
+       <span id="before_element_change"></span><br>
+       <span id="after_element_change"></span>
+       <p id="array_into_string"></p>
+       <p id="acess_full_array"></p>
+       <p id="access_last_array"></p>
+       <p id="array_are_objects"></p>
+       <p id="array_length"></p>
+       <p id="array_sort"></p>
+       <p id="looping_array_elements"></p>
+       <p id="push_array_elements"></p>
+       <p id="new_key"></p>
+       <p id="check_array"></p>
+       <p id="nested_array"></p>
+</body>
+<script>
+        // Create Javascript Arrays
+        let prolang = ['HTML' , 'JAVASCRIPT', 'CSS'];
+        console.log(`CREATE ARRAY: ${prolang}`);
+        console.log(`CREATE ARRAY: `, prolang);
+        
+        let cars = [
+                'Saab',
+                'Volvo',
+                'BMW',
+        ]
+        document.getElementById('create_array').innerHTML = (`CREATE ARRAY METHOD: ` + cars);
+        
+        
+        // PUT DATA ON ARRAY
+        
+        let person = [];
+        
+        person[0]='Akash';
+        person[1]='Rahul';
+        person[2]='Riya';
+        person[3]='Jayanta';
+        
+        document.getElementById('put_data_on_array').innerHTML = (`PUT DATA ON ARRAY: ` + person);
+        
+        // KEYWORD NEW
+        
+        let bike =  new Array('YAMAHA','HONDA','HERO')
+        document.getElementById('KEYWORD_new').innerHTML = ('KEYWORD NEW: ' + bike);
+        
+        // ACCESSING ARRAY ELEMENTS
+        let store_access_ele = bike[1];
+        document.getElementById('accessing_array_elements').innerHTML = (`ACCESSING ARRAY ELEMENTS: ` + store_access_ele);
+        
+        
+        // CHANGING ARRAY ELEMENTS
+        const bike1 = ['YAHAMA','HONDA','HERO'];
+        document.getElementById('before_element_change').innerHTML = ('CHANGING ARRAY ELEMENTS(BEFORE MODIFY): ' + bike1);
+        bike1[0]='SUZUKI';
+        document.getElementById('after_element_change').innerHTML = ('CHANGING ARRAY ELEMENTS(AFTER MODIFY): ' + bike1);
+        
+        
+        // CONVERTING AN ARRAY TO A STRING
+        const fruits = ['mango','apple','orange'];
+        let store_convert_into_string = fruits.toString();
+        let store_convert_into_string_type = typeof(store_convert_into_string);
+        document.getElementById('array_into_string').innerHTML = (`ARRAY TO A STRING: `+ store_convert_into_string + ` TypeOF: ${store_convert_into_string_type}`);
+        
+        
+        // ACCESS THE FULL ARRAY
+        const fruits1 = ['mango','apple','orange'];
+        document.getElementById('acess_full_array').innerHTML = (`ACCESS THE FULL ARRAY: `+fruits1);
+        
+        // ACCESS THE LAST ELEMENTS FROM ARRAY
+        document.getElementById('access_last_array').innerHTML = (`ACCESS THE LAST ELEMENTS; `+ fruits[fruits.length-1]);
+        
+        
+        // ARRAY ARE OBJECTS
+        const emp = {fname:'Akash' , lname:'Biswas', age:24}
+        
+        document.getElementById('array_are_objects').innerHTML = (`ARRAY ARE OBJECTS: `+emp.fname +" "+emp.lname);
+        
+        
+        // ARRAY PROPERTIES AND METHODS
+        
+        const storelen=['HTML' , 'JAVASCRIPT', 'CSS'];
+        document.getElementById('array_length').innerHTML = (`ARRAY LENGTH: `+ storelen.length);  
+        
+        const sortarr = ['b','a','c','d']
+        let store_sortarr = sortarr.sort();
+        document.getElementById('array_sort').innerHTML = (`ARRAY SORT: `+store_sortarr);
+        
+        // LOOPING ARRAY ELEMENTS
+        let looparrayele = ["Banana" , 'Apple', 'Pineapple', 'Chiku' ]
+        let text = '<ul>'
+                for(let i = 0  ; i <looparrayele.length ; i++)
+        {
+                text += '<li>'+looparrayele[i]+'</li>';
+        }
+        text +="</ul>"  
+        document.getElementById('looping_array_elements').innerHTML = `LOOPING ARRAY ELEMENTS: ${text}`
+
+        // PUSH ARRAY ELEMENTS
+        let language = ['HTML', 'CSS', 'PYTHON']
+        language.push('JAVASCRIPT')
+        document.getElementById('push_array_elements').innerHTML = `PUSH ARRAY ELEMENTS: ${language}`
+
+        // NEW KEYWORD
+        const points = new Array(40,100,1);
+        document.getElementById('new_key').innerHTML = `ARRAY WITH NEW KEYWORD: ` + points;
+        document.getElementById('check_array').innerHTML = `ARRAY OR NOT: ` + Array.isArray(points) +" "+ (points instanceof Array);
+
+        
+       // NESTED ARRAYS AND OBJECTS
+       const myobj = {
+           name: 'Akash',
+           lname: 'Biswas',
+           cars:[
+               {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+               {name:"BMW", models:["320", "X3", "X5"]},
+               {name:"Fiat", models:["500", "Panda"]}
+           ]
+       } 
+
+       for(let x in myobj.cars){
+        x += '<h2>'+ myobj.cars[i].name + '</h2>';
+        for(let j in myobj.cars[i].models){
+           x += myobj.cars[i].models[j] + '<br>';
+        } 
+       }
+
+          document.getElementById('nested_array').innerHTML = x;  
+        </script>
+        
+</html>
+
+
+
+
+
+
+
+
+
+
