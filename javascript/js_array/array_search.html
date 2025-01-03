@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;color: white;">
+    <p id="indexof"></p>
+    <p id="lastindexof"></p>
+    <p id="array_includes"></p>
+    <p id="array_find"></p>
+    <p id="array_findindex"></p>
+    <p id="array_findlast"></p>
+    <p id="array_findlastindex"></p>
+</body>
+<script>
+    // Index Of
+    let arr1 = ['Html','Css','Javascript','Python']
+    store_indexof = arr1.indexOf('Css') + 1
+    document.getElementById('indexof').innerHTML = `Array Index:  ${store_indexof}`
+
+    // Last INDEX OF
+    store_last_index = arr1.lastIndexOf('Css') + 1
+    document.getElementById('lastindexof').innerHTML = `Array Last Index: ${store_last_index}`
+   
+    // Array Includes
+    arr1.includes('Java')
+    document.getElementById('array_includes').innerHTML = `Array Includes: ${arr1}`
+
+    // Array Find
+
+    const arr2 = [4,9,15,10,1]
+    let arr_find = arr2.find(myfun);
+
+    document.getElementById('array_find').innerHTML = `Array Find: ${arr_find} greater than 13` 
+    function myfun(value,index,array){
+        return value > 13
+    }
+
+
+    // Array FindIndex()
+    let arr_findindex = arr2.findIndex(myfun2)
+    document.getElementById('array_findindex').innerHTML = `Array Find Index: ${arr_findindex}`
+    function myfun2(value,index,array){
+        return value >  13
+    }
+
+    // Array Find Last()
+    array_findlast = arr2.findLast(x => x > 10)
+    array_findlastindex= arr2.findLastIndex(x => x > 10)
+    document.getElementById('array_findlast').innerHTML = `Array Find Last: ${array_findlast}`
+    document.getElementById('array_findlastindex').innerHTML = `Array Find Last Index: ${array_findlastindex}`
+
+</script>
+</html>
+
+
+<!-- 
+IndexOf = The indexOf() method searches an array for an element value and returns its position.
+
+Syntax
+array.indexOf(item, start)
+Array.indexOf() returns -1 if the item is not found.
+If the item is present more than once, it returns the position of the first occurrence.
+
+Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+Syntax
+array.lastIndexOf(item, start)
+item 	Required. The item to search for
+start 	Optional. Where to start the search. Negative values will start at the given position counting from the end, and search to the beginning
+
+Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf)
+array.includes(search-item)
+
+The find() method returns the value of the first array element that passes a test function.
+
+The findIndex() method returns the index of the first array element that passes a test function.
+
+the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+
+The findLastIndex() method finds the index of the last element that satisfies a condition.
+
+
+-->
