@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <p id="arr_sort"></p>    
+    <p id="arr_reverse" title="Before Sort [a,c,b,d,f,e]"></p> 
+    <p id="arr_tosort" title="Before Sort [a,c,b,d,f,e]"></p> 
+    <p id="numeric_sort_ascending"></p>
+    <p id="numeric_sort_descending"></p>
+    <p id="button_sort"></p>
+    <button onclick=myfunsort()>Click Auto sort</button>
+    <br><br>
+    <span id="display_original"></span>&nbsp;<button onclick=myfunran()>Generate: <span id="arr_random"></span></button>
+    <p id="demo"></p>
+    <button onclick=fisherfun()>click<span id="demo1"></span></button>
+</body>
+<script>
+    // ARRAY SORT()
+   arr1 = ['a' , 'c' , 'b' , 'd' , 'f' , 'e']
+   store_sort_arr = arr1.sort()
+   document.getElementById('arr_sort').innerHTML = `ARRAY SORT: ${store_sort_arr}`
+
+   // ARRAY REVERSING 
+    store_rev_arr = arr1.reverse()
+   document.getElementById('arr_reverse').innerHTML = `ARRAY REVERSE: ${store_rev_arr}`
+
+  // ARRAY TOSSORT()
+    store_tosort_arr = arr1.toSorted()
+    document.getElementById('arr_tosort').innerHTML = `ARRAY TO SORT():  ${store_tosort_arr}`    
+
+
+  // ARRAY NUMERIC SORT (ASCENDING AND DESCENDING)
+   let num_arr = [1,3,2,4,6,5,8,7]
+   store_arr_ascending = num_arr.sort(function(a,b){return a-b})
+   document.getElementById('numeric_sort_ascending').innerHTML = `NUMERIC SORT ASCENDING:  ${store_arr_ascending}`
+
+   
+   store_arr_decending = num_arr.sort(function(a,b){return b-a})
+   document.getElementById('numeric_sort_descending').innerHTML = `NUMERIC SORT DESCENDING: ${store_arr_decending}` 
+
+
+ //ARRAY SORT USING HTML BUTTON
+   arr_aplha_button = ['a','c','b','d','f','e']
+   arr_num_button = [1,3,2,5,4,6,8,7]
+
+   function myfunsort(){
+    arr_aplha_button.sort()
+    arr_num_button.sort()
+    document.getElementById('button_sort').innerHTML = `ARRAY SORT AUTO: ${'<br>'+arr_aplha_button +'<br>' + arr_num_button}`
+   }
+
+
+ // ARRAY RANDOM
+   arr_num3 = [1,2,3,4,5,6,7,8,9,10] 
+   document.getElementById('display_original').innerHTML = arr_num3;
+   function myfunran(){
+    store_random = arr_num3.sort(function(){return 0.5 - Math.random()})
+    document.getElementById('arr_random').innerHTML = store_random;     
+   }
+   
+    
+
+
+//ARRAY FIHSER YATES METHOD (ACCURATE IN SORTING)
+const array_fisher = [40, 100, 1, 5, 25, 10]
+
+function fisherfun(){
+for (let i = array_fisher.length -1 ; i>0 ; i--){
+    let  j = Math.floor(Math.random() * (i+1));
+    let k  = array_fisher[i];
+    array_fisher[i] = array_fisher[j];
+    array_fisher[j] == k ; 
+}
+document.getElementById('demo1').innerHTML = array_fisher;
+}
+
+</script>
+</html> 
+
