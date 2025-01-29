@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- BOOTSTRAP -->
+ <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH' crossorigin='anonymous'>
+ <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js' integrity='sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz' crossorigin='anonymous'></script>
+
+<body>
+<main class="bg-danger container-fluid ">    
+<div class="tab">
+    <button class="tablinks" onclick="prolang(event, 'html')">Html</button>
+    <button class="tablinks" onclick="prolang(event, 'css')">Css</button>
+    <button class="tablinks" onclick="prolang(event, 'php')">Php</button>
+</div>
+
+<div id="html" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Html</h3>
+    <p>Hypertext Markup Language</p>
+</div>
+<div id="css" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Css</h3>
+    <p>Cascading Style Sheet</p>
+</div>
+<div id="php" class="tabcontent">
+    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+    <h3>Php</h3>
+    <p>Hypertext Preprocessor</p>
+</div>
+</main>
+
+</body>
+<style>
+    /* TABS FUNCTIONS */
+        .tab{
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+
+        }
+        .tab button{
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        .tab button:hover{
+            background-color: #ddd;
+        }
+        .tab button.active{
+            background-color: #ccc;
+        }
+
+        .tabcontent{
+            display: none;
+            padding: 6px 12px;
+            -webkit-animation: fadeEffect 1s;
+            animation: fadeEffect 1s;
+        }
+        @-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+/* CLOSE TABS CROSS */
+.topright{
+    font-size: xx-large;
+    cursor: pointer;
+    float: right;
+}
+
+.topright:hover {
+    color: red;
+}
+
+</style>
+
+<script>
+    // TABS FUNCTIONS
+    function prolang(evt , langname){
+      var i , tabcontent , tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for(i=0 ; i < tabcontent.length;i++){
+        tabcontent[i].style.display='none';
+      }
+      tablinks=document.getElementsByClassName("tablinks");
+      for(i=0;i<tablinks.length;i++){
+         tablinks[i].className=tablinks[i].className.replace('active','');
+      }
+      document.getElementById(langname).style.display='block';
+      evt.currentTarget.className+='active';
+    } 
+
+    // CLOSE TABS CROSS Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</html>
