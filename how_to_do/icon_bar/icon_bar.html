@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Bar</title>
+    
+</head>
+
+<style>
+  body{margin: 0;}
+  .icon-bar{
+    width: 80px;
+    background-color: #555;
+  }
+  .icon-bar a{
+    display: block;
+    text-align: center;
+    transition: all 0.3 ease;
+    color: white;
+    font-size: 25px;
+  }  
+  .icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+</style>
+<body>
+    <div class="icon-bar">
+        <a class="active" href="#"><i class="fa fa-home"></i>Home</a>
+        <a href="#"><i class="fa fa-search"></i>Search</a>
+        <a href="#"><i class="fa fa-envelope"></i>Envelope</a>
+        <a href="#"><i class="fa fa-globe"></i>Global</a>
+        <a href="#"><i class="fa fa-trash"></i>Trash</a>
+    </div>
+</body>
+</html>
