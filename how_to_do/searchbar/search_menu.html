@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="left" style="background-color: #bbb;">
+        <h2>Menu</h2>
+        <input type="text" id="mysearch" onkeyup="myfun()" placeholder="search..">
+        <ul id="mymenu">
+            <li ><a href="">Html</a></li>
+            <li ><a href="">Css</a></li>
+            <li ><a href="">Php</a></li>
+        </ul>
+    </div>
+
+    <div class="right" style="background-color: #ddd;">
+        <h2>Full Forms</h2>
+        <p>Hypertext Markup Language</p>
+        <p>Cascading style sheet</p>
+        <p>Personal Home Page</p>
+    </div>
+</body>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+       .row{
+          display: flex;
+       }
+
+       .left{
+        flex: 35%;
+        padding: 15px 0;
+       }
+
+       .left h2{
+        padding-left: 8px;
+       }
+
+       .right{
+        flex: 65%;
+        padding: 15px ;
+       }
+
+       #mysearch{
+        width: 100%;
+        padding: 11px;
+        border: 1px solid black;
+       }
+
+       #mymenu{
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+       }
+
+       #mymenu li a {
+        padding: 12px;
+        text-decoration: none;
+        color: black;
+        display: block;
+       }
+
+       #mymenu li a:hover{
+        background-color: #000000;
+        color: white;
+       }
+</style>
+
+<script>
+function myfun() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mysearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("mymenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</html>
