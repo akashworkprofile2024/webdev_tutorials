@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<p>Finding HTML Elements by Query Selector</p>
+
+<p class="intro">HTML</p>
+<p class="unintro">PHP</p>
+<p class="intro">CSS</p>
+
+<p id="demo"></p>
+
+<script>
+const store = document.querySelectorAll("p.intro");
+document.getElementById("demo").innerHTML = "Get: "+ store.length;
+</script>
+
+</body>
+</html>

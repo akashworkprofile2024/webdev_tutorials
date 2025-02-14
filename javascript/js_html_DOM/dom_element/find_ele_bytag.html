@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" style="display:none;">
+        <p>First line</p>
+        <p>Second line</p>
+    </div>
+
+    <p id="demo"></p>
+</body>
+<script>
+    const x = document.getElementById("main");
+    const y = x.getElementsByTagName("p");
+    
+    document.getElementById("demo").innerHTML = "index number: "+ y[1].innerHTML;    // tag indexing 
+</script>
+</html>
