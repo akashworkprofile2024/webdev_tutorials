@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>ENTER NUMBER BETWEEN 1 TO 12</h4>
+    <input id="num">
+    <button type="button" onclick="myfun()">submit</button>
+
+    <p id="demo"></p>
+</body>
+<script>        
+    function myfun(){
+        let store = document.getElementById('num').value;
+        if(isNaN(store) || store < 1 || store > 12 ){
+               text = 'Input not Valid !!';
+        }else{
+            text = 'Input is valid';
+        }
+        document.getElementById('demo').innerHTML=text;
+    }
+</script>
+</html>
