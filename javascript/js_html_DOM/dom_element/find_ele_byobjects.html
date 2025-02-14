@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- FIND ANCHOR TAG -->
+<h2>Finding HTML Elements Using document.anchors</h2>
+
+<a name="html">HTML Tutorial</a><br>
+<a name="css">CSS Tutorial</a><br>
+<a name="xml">XML Tutorial</a><br>
+
+<p id="demo"></p>
+
+<!-- FIND FORMS -->
+<h2>Finding HTML Elements Using document.forms</h2>
+
+<form action="">
+First name: <input type="text" name="fname" value="Donald">
+<input type="submit" value="Submit">
+</form> 
+
+<p id="demo1"></p>
+
+
+
+<!-- FIND LINKS  -->
+
+<h2>Finding HTML Elements Using document.links</h2>
+
+<p>
+<a href="/html/default.asp">HTML</a>
+<br>
+<a href="/css/default.asp">CSS</a>
+</p>
+
+<p id="demo2"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Number of anchors are: " + document.anchors.length;
+
+document.getElementById("demo1").innerHTML =
+"Number of forms: " + document.forms.length;
+
+document.getElementById("demo2").innerHTML =
+"Number of links: " + document.links.length;
+</script>
+</body>
+</html>
