@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mydiv1 , #mydiv2{
+        background-color: coral;
+        padding: 50px;
+    }
+
+    #myp1, #myp2{
+        background-color: white;
+        font-size: 20px;
+        border: 1px solid;
+        padding: 20px;
+    }
+</style>
+<body>
+    <div id="mydiv1">
+        <h2>Bubbling</h2>
+        <p id="myp1">Click ME</p>
+    </div><br>
+
+    <div id="mydiv2">
+        <h2>Capturing</h2>
+        <p id="myp2">Click Me</p>
+    </div>
+</body>
+<script>
+    document.getElementById('myp1').addEventListener('click',function(){
+        alert('You Clicked the white element');
+    },false);
+
+    document.getElementById('mydiv1').addEventListener('click',function(){
+        alert('You Clicked The Orange element');
+    },false);
+
+    document.getElementById('myp2').addEventListener('click',function(){
+        alert('You Clicked the white element');
+    },true);
+
+    document.getElementById('mydiv2').addEventListener('click',function(){
+        alert('You Clicked the Orange element');
+    },true);
+</script>
+</html>
