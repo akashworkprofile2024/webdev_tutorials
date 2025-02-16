@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="mybtn">Click ME</button>
+    <p id="demo"></p>
+</body>
+<script>
+   var store = document.getElementById('mybtn');
+   store.addEventListener('click',myfun);
+   store.addEventListener('click',someotherfun);
+
+   function myfun(){
+     alert('Hello World!');
+   }
+
+   function someotherfun(){
+     alert('This function was also executed');
+   }
+</script>
+</html>

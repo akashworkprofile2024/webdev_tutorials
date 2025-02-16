@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <button id="mbtn">Try it</button>
+    <p id="demo"></p>
+</body>
+<script>
+   var store = document.getElementById('mbtn');
+   store.addEventListener('mouseover',myfun);
+   store.addEventListener('click',mysecfun);
+   store.addEventListener('mouseout',mythirdfun);
+
+   function myfun(){
+       document.getElementById('demo').innerHTML+='Mouse Over !<br>';
+   }
+
+   function mysecfun(){
+    document.getElementById('demo').innerHTML+='Clicked <br>';
+   }
+
+   function mythirdfun(){
+    document.getElementById('demo').innerHTML+='Mouse out <br>';
+   }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter : <input type="text" id="ftext" oninput="uppercase()"><br><br>
+    Enter : <input type="text" id="ftext1" onchange="uppercase1()">
+</body>
+<script>
+//   ONINPUT
+  function uppercase(){
+    const store = document.getElementById("ftext");
+    store.value = store.value.toUpperCase();
+  }
+
+// ONCHANGE
+
+function uppercase1(){
+   const store1 = document.getElementById('ftext1');
+   store1.value = store1.value.toUpperCase(); 
+}
+
+</script>
+</html>
