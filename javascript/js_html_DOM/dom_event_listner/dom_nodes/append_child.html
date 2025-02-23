@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <div id="div1">
+        <p id="p1">This is a Javascript</p>
+        <p id="p2">This is another Javascript</p>
+    </div>
+</body>
+<script>
+   const para = document.createElement('p');
+   const node = document.createElement('This is new');
+   para.appendChild(node);
+   const element = document.getElementById('div1');
+   element.appendChild(para);
+</script>
+</html>
