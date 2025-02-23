@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" style="background-color: purple; color: white;" title="div1">
+        <p id="p1">This is a paragraph</p>
+        <p id="p2">This is a paragraph</p>
+    </div>
+
+    <div id="div2" style="background-color: red; color: white;" title="div2">
+
+    </div>
+
+</body>
+<script>
+    const para = document.createElement('p');
+    const node = document.createTextNode("This is new");
+    para.appendChild(node);
+
+    const element = document.getElementById('div2');
+    element.appendChild(para);
+</script>
+</html>
+
+<!-- To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element.  -->
