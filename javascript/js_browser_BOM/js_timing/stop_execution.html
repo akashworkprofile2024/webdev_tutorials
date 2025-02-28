@@ -1,0 +1,27 @@
+<p id="demo"></p>
+<button onclick="stopTimer()">Stop</button>
+<button onclick="startTimer()">Start</button>
+
+<script>
+    let myvar;
+
+    // Start function to initiate the timer
+    function startTimer() {
+        // Prevent setting a new interval if one is already running
+        if (!myvar) {
+            myvar = setInterval(mytimer, 1000);
+        }
+    }
+
+    // Stop function to clear the interval
+    function stopTimer() {
+        clearInterval(myvar);
+        myvar = null;  // Reset the interval variable
+    }
+
+    // Timer function to update the time every second
+    function mytimer() {
+        const d = new Date();
+        document.getElementById('demo').innerHTML = d.toLocaleTimeString();
+    }
+</script>
