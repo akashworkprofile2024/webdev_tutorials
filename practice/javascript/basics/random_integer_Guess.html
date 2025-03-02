@@ -1,0 +1,29 @@
+<!-- Random Integer Guess Game -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <p id="display"></p>
+    <p id="choosen"></p>
+ </body>
+ <script>
+   var n=Math.ceil(Math.random()*10)
+   document.getElementById('display').innerHTML=n;
+
+   // Prompt the user to guess a number between 1 and 10
+   var storeinput = prompt('Guess the Number between 1 to 10');
+
+  //Check if the guessed number matches the generated random number
+  
+  if(storeinput == n){
+      document.getElementById('choosen').innerHTML='Matched'
+  }else{
+    document.getElementById('choosen').innerHTML= storeinput + ' Not Matched: '+ n;
+  }
+
+ </script>
+ </html>

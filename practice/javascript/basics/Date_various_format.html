@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="format1"></p>
+    <p id="format2"></p>
+    <p id="format3"></p>
+</body>
+<script>
+    let today = new Date();
+
+    let date = today.getDate();
+    let month = today.getMonth();
+    let year = today.getFullYear();
+
+    document.getElementById('format1').innerHTML="DD/MM/YY: "+date+'/'+month+'/'+year
+    document.getElementById('format2').innerHTML="MM/DD/YY: "+month+'/'+year+'/'+date
+    document.getElementById('format3').innerHTML="YY/MM/DD: "+year+'/'+month+'/'+date
+</script>
+</html>

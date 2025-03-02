@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="demo"></p>
+</body>
+<script>
+    side1 = 5
+    side2 = 6
+    side3 = 7
+
+    // Semiperimeter of the triangle
+
+    var s = (side1 + side2  +side3 ) /2;
+
+    // Use herons formula to calculate area 
+
+    var area = Math.sqrt(s*((s*side1) * (s*side2
+
+    ) * (s*side3)));
+
+    document.getElementById('demo').innerHTML='Area of Triangle: '+area
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="rotatefun('demo')">
+  <p id="demo">Akash Biswas</p>
+</body>
+<script>
+    function rotatefun(id){
+    // Get Element by Id  
+    var element = document.getElementById(id);
+
+    // Access the text node inside the element
+    var textnode=element.childNodes[0];
+    
+    // Extract the initial text content
+    var storetext = textnode.data;
+
+    // Set up interval to rotate the character
+    setInterval(
+        function(){
+        // Move the last Character to the begin 
+        storetext=storetext[storetext.length - 1 ] + storetext.substring(0,storetext.length - 1);
+
+        // update the text content of the text node
+        textnode.data=storetext;
+    },100);
+    }
+</script>
+</html>

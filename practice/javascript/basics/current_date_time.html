@@ -26,9 +26,33 @@ var datearr=['sunday','monday','tuesday','wednesday','thrusday','friday','saturd
 var hr = today.getHours();
 var min = today.getMinutes();
 var sec = today.getSeconds();
-
 // Determine AM / PM
 var ampam = (hr>=12)? "PM" : 'AM';
+
+// Convert 24 Hour Format to 12-hour Format
+ hr = (hr >= 12)? hr - 12 : hr;
+
+//  Check for Special case When Hour is 0
+if(hr === 0 && ampam ===' PM '){
+    if(min === 0 && sec === 0){
+        hr = 12;
+        ampam = 'Noon';
+    }else{
+        hr=12;
+        ampam='PM';
+    }
+}
+
+// Check for special cases when hour is 0
+if (hr === 0 && ampam === ' AM ') {
+    if (min === 0 && sec === 0) {
+        hr = 12;
+        ampam = ' Midnight';
+    } else {
+        hr = 12;
+        ampam = 'AM';
+    }
+}
 
 
 document.getElementById('CurrentDateTime').innerHTML="Current Date and Time : " + today;
@@ -36,6 +60,8 @@ document.getElementById('CurrentDay').innerHTML="Current Day: " + day;
 document.getElementById('CurrentDayName').innerHTML="Current Day Name: " + datearr[day];
 
 document.getElementById('CurrentTime').innerHTML="Time is:  " + hr+':'+min+':'+sec+' '+ampam;
+
+
 
 
 
