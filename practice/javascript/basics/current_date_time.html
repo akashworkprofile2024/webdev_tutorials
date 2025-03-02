@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="CurrentDateTime"></p>
+    <p id="CurrentDay"></p>
+    <p id="CurrentDayName"></p>
+    <p id="CurrentTime"></p>
+   
+</body>
+<script>
+
+// Get the Current Date and Time
+var today = new Date();
+
+// Get the Day of the Week
+let day = today.getDay();
+// Get the Day Name
+var datearr=['sunday','monday','tuesday','wednesday','thrusday','friday','saturday'];
+
+// Get Current Hours , Minutes , Seconds
+var hr = today.getHours();
+var min = today.getMinutes();
+var sec = today.getSeconds();
+
+// Determine AM / PM
+var ampam = (hr>=12)? "PM" : 'AM';
+
+
+document.getElementById('CurrentDateTime').innerHTML="Current Date and Time : " + today;
+document.getElementById('CurrentDay').innerHTML="Current Day: " + day;
+document.getElementById('CurrentDayName').innerHTML="Current Day Name: " + datearr[day];
+
+document.getElementById('CurrentTime').innerHTML="Time is:  " + hr+':'+min+':'+sec+' '+ampam;
+
+
+
+
+</script>
+</html>
