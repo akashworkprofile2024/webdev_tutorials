@@ -1,0 +1,21 @@
+<!-- Check if Integer is Within 20 of 100 or 400 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    function td(receive){
+        store = ((Math.abs(100 - receive) <= 20 || Math.abs(400 - receive) <=20 ))
+
+        document.getElementById('demo').innerHTML=store;
+    }
+    td(90);
+</script>
+</html>
+
