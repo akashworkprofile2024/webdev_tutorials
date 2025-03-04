@@ -6,9 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p id="demo"></p>
+    <p id="demo1"></p>
 </body>
 <script>
-    
+    function add_string(recieve){
+         store = "py"+recieve;
+         document.getElementById('demo').innerHTML=store;
+    }
+    add_string('File');
+
+    function add_string1(recieve1){
+        if(recieve1 === null || recieve1 === undefined || recieve1.substring(0,2)==='Py'){
+            document.getElementById('demo1').innerHTML = recieve1;
+        }else{
+           document.getElementById('demo1').innerHTML = 'Py'+recieve1;  
+        }
+    }
+    add_string1('File2');
 </script>
 </html>

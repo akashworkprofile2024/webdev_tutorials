@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    
+        function swapfun(catchstr) {
+  // Check if the length of catchstr is less than or equal to 1
+  if (catchstr.length <= 1) {
+    // If true, return catchstr as is
+    document.getElementById('demo').innerHTML=catchstr;
+  }
+  // Extract the substring from the second character to the second-to-last character of catchstr
+  mid_char = catchstr.substring(1, catchstr.length - 1);
+  // Return the last character of catchstr followed by mid_char and then the first character of catchstr
+  store =  (catchstr.charAt(catchstr.length - 1)) + mid_char + catchstr.charAt(0);
+  document.getElementById('demo').innerHTML=store;
+}
+    
+    swapfun('Akash')
+</script>
+</html>
