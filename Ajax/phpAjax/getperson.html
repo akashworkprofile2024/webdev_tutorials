@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Info</title>
+</head>
+<body>
+
+<form>
+    <select name="emplist" onchange="showUser(this.value)">
+        <option value="">Select an Employee</option>
+        <option value="1">Akash Biswas</option>
+        <option value="2">Riya Das</option>
+        <option value="3">Raj Murli</option>
+        <option value="4">Tukaram Bhide</option>
+        <option value="5">Madhavi Bhide</option>
+        <option value="6">Manmeet Kaur</option>
+        <option value="7">Diler Singh</option>
+    </select>
+</form>
+
+<br>
+<div id="txtHint"><b>Person Info Will be Listed Here...</b></div>
+
+<script>
+    function showUser(str) {
+        if (str == "") {
+            document.getElementById('txtHint').innerHTML = "";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById('txtHint').innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "getperson.php?show=" + str, true);
+            xmlhttp.send();
+        }
+    }
+</script>
+
+</body>
+</html>
