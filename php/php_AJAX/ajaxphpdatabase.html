@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <select name="users" onchange="showUser(this.value)">
+            <option value="">Select a person:</option>
+            <option value="1">Akash Biswas</option>
+            <option value="2">Riya Das</option>
+            <option value="3">Raj Murli</option>
+            <option value="4">Priya Sharma</option>
+            <option value="5">Tukaram Bhide</option>
+            <option value="6">Madhavi Bhide</option>
+            <option value="7">Manmeet Kaur</option>
+            <option value="8">Diler Singh</option>
+            
+        </select>
+    </form>
+    <br>
+    <div id="txtHint"><b>Person info will be listed here...</b></div>
+
+    <script>
+        function showUser(str){
+            if(str == ""){
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            }else{
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+                        document.getElementById("txtHint").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "ajaxphpdatabase.php?name="+str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+</body>
+</html>

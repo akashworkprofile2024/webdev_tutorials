@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Info</title>
+</head>
+<body>
+    <script>
+        function showCD(str) {
+            if (str == "") {
+                document.getElementById("txtHint").innerHTML = "";
+                return;
+            }
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "ajaxXMLdatabase.php?name=" + str, true);
+            xmlhttp.send();
+        }
+    </script>
+
+    <form>
+        <select name="cd" onchange="showCD(this.value)">
+            <option value="">Select an Employee:</option>
+            <option value="1">Akash Biswas</option>
+            <option value="2">Riya Das</option>
+            <option value="3">Raj Murli</option>
+            <option value="3">Priya Sharma</option>
+            <option value="3">Tukaram Bhide</option>
+            <option value="3">Madhavi Bhide</option>
+            <option value="3">Manmeet Kaur</option>
+            <option value="3">Diler Singh</option>
+        </select>
+    </form>
+
+    <div id="txtHint"><b>Employee info will be displayed here...</b></div>
+</body>
+</html>
