@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Border Animation on Hover</title>
+  <style>
+    .animated-border {
+      width: 200px;
+      height: 200px;
+      margin: 50px auto;
+      border: 2px solid transparent;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .animated-border::before,
+    .animated-border::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #3498db;
+      transition: 0.4s;
+    }
+
+    .animated-border::before {
+      top: 0;
+      left: 0;
+    }
+
+    .animated-border::after {
+      bottom: 0;
+      right: 0;
+    }
+
+    .animated-border:hover {
+      border-color: #3498db;
+    }
+
+    .animated-border:hover::before {
+      width: 100%;
+    }
+
+    .animated-border:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="animated-border" style="background-color:#212121;"></div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Border</title>
+  <style>
+    body {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .border-animation {
+      position: relative;
+      padding: 40px 80px;
+      background: #222;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      border-radius: 10px;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .border-animation::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+      z-index: -1;
+      background-size: 400% 400%;
+      animation: borderMove 6s linear infinite;
+      border-radius: 12px;
+    }
+
+    .border-animation::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      background: #222;
+      z-index: -1;
+      border-radius: 8px;
+    }
+
+    @keyframes borderMove {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="border-animation">
+    Glowing Animated Border
+  </div>
+
+</body>
+</html>

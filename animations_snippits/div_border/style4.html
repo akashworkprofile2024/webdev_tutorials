@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Glow Border Animation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .glow-border {
+      position: relative;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      background-color: #111;
+      border-radius: 12px;
+      transition: 0.3s;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .glow-border::before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #0fffc1, #7e0fff, #0fffc1, #7e0fff);
+      background-size: 300% 300%;
+      border-radius: 14px;
+      z-index: -1;
+      filter: blur(8px);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      animation: glowing 6s linear infinite;
+    }
+
+    .glow-border:hover::before {
+      opacity: 1;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 300% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+  </style>
+</head>
+<body class="p-5 bg-dark">
+
+  <div class="container">
+    <div class="glow-border p-5">
+      ✨ Hover me for glowing border magic!
+    </div>
+  </div>
+
+</body>
+</html>

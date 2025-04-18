@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fancy Border Animation</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 100px auto;
+      background-color: #f9f9f9;
+    }
+
+    .line {
+      position: absolute;
+      background-color: red;
+      transition: all 0.5s linear;
+    }
+
+    .top, .bottom {
+      width: 0%;
+      height: 2px;
+    }
+
+    .left, .right {
+      height: 0%;
+      width: 2px;
+    }
+
+    .top {
+      top: 0;
+      left: 0;
+    }
+
+    .left {
+      top: 0;
+      left: 0;
+    }
+
+    .bottom {
+      bottom: 0;
+      right: 0;
+    }
+
+    .right {
+      bottom: 0;
+      right: 0;
+    }
+
+    .box:hover .top {
+      animation: drawTop 0.5s forwards;
+    }
+
+    .box:hover .left {
+      animation: drawLeft 0.5s 0.5s forwards;
+    }
+
+    .box:hover .bottom {
+      animation: drawBottom 0.5s 1s forwards;
+    }
+
+    .box:hover .right {
+      animation: drawRight 0.5s 1.5s forwards;
+    }
+
+    .box:hover .line {
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes drawTop {
+      to { width: 100%; }
+    }
+
+    @keyframes drawLeft {
+      to { height: 100%; }
+    }
+
+    @keyframes drawBottom {
+      to { width: 100%; }
+    }
+
+    @keyframes drawRight {
+      to { height: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <div class="line top"></div>
+  <div class="line left"></div>
+  <div class="line bottom"></div>
+  <div class="line right"></div>
+</div>
+
+</body>
+</html>
